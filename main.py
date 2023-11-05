@@ -35,4 +35,8 @@ print(users)
 users.insert(0, 'Bob')
 print(users)
 
-users[2:2]
+users[2:2] = ['Eddie','Alex']
+print(users)
+
+users[1:3] = ['Robert', 'JPJ']
+print(users)
