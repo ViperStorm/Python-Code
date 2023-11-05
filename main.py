@@ -10,7 +10,9 @@ emptylist = []
 print(users[0])
 print(users[-2])
 
-print(users.index('Sara'))
+print(users.index('Sara')) #Tells were Sara is at the index
+                           #note: the index is at proper index
+                           #(it is at index 3) even though it is technically at index 2
 
 print(users[0:2])
 print(users[1:])
@@ -18,14 +20,15 @@ print(users[-3:-1])
 
 print(len(data))
 
-users.append('Elsa')
+users.append('Elsa') #*1
 print(users)
 
-users += ['Jason']
+users += ['Jason'] # *1
 print(users)
 
-users.extend(['Robert', 'Jimmy'])
+users.extend(['Robert', 'Jimmy']) #*1
 print(users)
 
-users.extend(data)
+users.extend(data) # Does the same thing *1
 print(users)
+
