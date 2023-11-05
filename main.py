@@ -32,4 +32,7 @@ print(users)
 # users.extend(data) # Does the same thing *1
 # print(users)
 
-users.insert()
+users.insert(0, 'Bob')
+print(users)
+
+users[2:2]
