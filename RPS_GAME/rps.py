@@ -25,10 +25,14 @@ class RPS(Enum):
     PAPER = 2
     SCISSORS = 3
 
+show_rules = lambda: print("Game Rules:\n1. Rock beats Scissors.\n2. Paper beats Rock.\n3. Scissors beat Paper.\nYou and Python will make your choices. Let's see who wins!\n")
+
 print("Welcome to Rock, Paper, Scissors!\n")
 print("1 for Rock, 2 for Paper, or 3 for Scissors\n")
 
 play_again = "y"  # Initialize play_again variable
+
+
 
 # Ask the user whether they want to read the rules
 read_rules = input("Do you want to read the rules? (y/n): ").strip().lower()
@@ -37,12 +41,7 @@ while play_again == "y":
     try:
         if read_rules == "y":
             start_sound.play()
-            print("Game Rules:\n")
-            print("1. Rock beats Scissors.")
-            print("2. Paper beats Rock.")
-            print("3. Scissors beat Paper.")
-            print("You and Python will make your choices. Let's see who wins!\n")
-            input("Press Enter to continue...")
+            show_rules()
 
         playerchoice = int(input("Enter your choice: "))
 
