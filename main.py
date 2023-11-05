@@ -58,3 +58,6 @@ print(data)
 users[1:2] = ['dave']
 users.sort()
 print(users)
+
+users.sort(key=str.lower)
+print(users)
