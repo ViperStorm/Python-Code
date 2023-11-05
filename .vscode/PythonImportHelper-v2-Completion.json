@@ -1,0 +1,313 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "first",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "YouTube",
+        "importPath": "pytube",
+        "description": "pytube",
+        "isExtraImport": true,
+        "detail": "pytube",
+        "documentation": {}
+    },
+    {
+        "label": "argv",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "calculateAreaofRectangle",
+        "kind": 2,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "def calculateAreaofRectangle(length, width):\n    return length * width\ndef calculatePerimeterofRectangle(length, width):\n    return 2 * (length + width)\ndef length():\n    global length\n    length = float(input(\"Enter your length number: \"))\ndef width():\n    global width\n    width = float(input(\"Enter your width number: \"))",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "calculatePerimeterofRectangle",
+        "kind": 2,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "def calculatePerimeterofRectangle(length, width):\n    return 2 * (length + width)\ndef length():\n    global length\n    length = float(input(\"Enter your length number: \"))\ndef width():\n    global width\n    width = float(input(\"Enter your width number: \"))\ndef game_over():\n    print(\"Invalid choice\")",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "length",
+        "kind": 2,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "def length():\n    global length\n    length = float(input(\"Enter your length number: \"))\ndef width():\n    global width\n    width = float(input(\"Enter your width number: \"))\ndef game_over():\n    print(\"Invalid choice\")\n    for i in range(5, 0, -1):\n        print(f\"{i}...\")",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "width",
+        "kind": 2,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "def width():\n    global width\n    width = float(input(\"Enter your width number: \"))\ndef game_over():\n    print(\"Invalid choice\")\n    for i in range(5, 0, -1):\n        print(f\"{i}...\")\n        time.sleep(1)\n    print(\"Ya been BOOTED!!!\")\nchoice1 = input(\"Enter your choice, area/perimeter (enter a or p): \").lower().strip()",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "game_over",
+        "kind": 2,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "def game_over():\n    print(\"Invalid choice\")\n    for i in range(5, 0, -1):\n        print(f\"{i}...\")\n        time.sleep(1)\n    print(\"Ya been BOOTED!!!\")\nchoice1 = input(\"Enter your choice, area/perimeter (enter a or p): \").lower().strip()\nwhile True:\n    if choice1 == \"a\":\n        print(\"\\nOk!\")",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "play",
+        "kind": 5,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "play = input(\"Do you want to play? - (y/n)\").lower().strip()\nif play != \"y\":\n    print(\"Guess you're not playing.\")\n    quit()\ndef calculateAreaofRectangle(length, width):\n    return length * width\ndef calculatePerimeterofRectangle(length, width):\n    return 2 * (length + width)\ndef length():\n    global length",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "choice1",
+        "kind": 5,
+        "importPath": "calculate_area_and_perimeter",
+        "description": "calculate_area_and_perimeter",
+        "peekOfCode": "choice1 = input(\"Enter your choice, area/perimeter (enter a or p): \").lower().strip()\nwhile True:\n    if choice1 == \"a\":\n        print(\"\\nOk!\")\n        length()\n        width()\n        print(\"The area of your rectangle is \", calculateAreaofRectangle(length, width))\n        break\n    elif choice1 == \"p\":\n            print(\"Ok!\")",
+        "detail": "calculate_area_and_perimeter",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "dice_roll",
+        "description": "dice_roll",
+        "peekOfCode": "name = input(\"\\nWhat is your name? - \")\nplay = input(\"\\nDo you want to play? (y/n) - \").lower().strip()\nif play != \"y\":\n        print(f\"FINE I DIDNT WANT YOU TO PLAY ANYWAYS, {name}\")\n        quit()\nwhile 1:\n    dice_roll = random.randint(1, 6)\n    print(f\"\\nYou rolled a {dice_roll}\")\n    repeat = input(\"Do you want to roll the dice again? - (y/n)\").lower().strip()\n    if repeat != 'y':",
+        "detail": "dice_roll",
+        "documentation": {}
+    },
+    {
+        "label": "play",
+        "kind": 5,
+        "importPath": "dice_roll",
+        "description": "dice_roll",
+        "peekOfCode": "play = input(\"\\nDo you want to play? (y/n) - \").lower().strip()\nif play != \"y\":\n        print(f\"FINE I DIDNT WANT YOU TO PLAY ANYWAYS, {name}\")\n        quit()\nwhile 1:\n    dice_roll = random.randint(1, 6)\n    print(f\"\\nYou rolled a {dice_roll}\")\n    repeat = input(\"Do you want to roll the dice again? - (y/n)\").lower().strip()\n    if repeat != 'y':\n        print(f\"Thanks for playing {name}.\")",
+        "detail": "dice_roll",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "kind": 2,
+        "importPath": "fully_working_calculator",
+        "description": "fully_working_calculator",
+        "peekOfCode": "def add(x, y):\n    return x + y\ndef subtract(x, y):\n    return x - y\ndef multiply(x, y):\n    return x * y\ndef divide(x, y):\n    if y == 0:\n        return \"Error: Division by zero\"\n    return x / y",
+        "detail": "fully_working_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "subtract",
+        "kind": 2,
+        "importPath": "fully_working_calculator",
+        "description": "fully_working_calculator",
+        "peekOfCode": "def subtract(x, y):\n    return x - y\ndef multiply(x, y):\n    return x * y\ndef divide(x, y):\n    if y == 0:\n        return \"Error: Division by zero\"\n    return x / y\nwhile True:\n    print(\"Simple Calculator\")",
+        "detail": "fully_working_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "multiply",
+        "kind": 2,
+        "importPath": "fully_working_calculator",
+        "description": "fully_working_calculator",
+        "peekOfCode": "def multiply(x, y):\n    return x * y\ndef divide(x, y):\n    if y == 0:\n        return \"Error: Division by zero\"\n    return x / y\nwhile True:\n    print(\"Simple Calculator\")\n    print(\"1. Add\")\n    print(\"2. Subtract\")",
+        "detail": "fully_working_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "divide",
+        "kind": 2,
+        "importPath": "fully_working_calculator",
+        "description": "fully_working_calculator",
+        "peekOfCode": "def divide(x, y):\n    if y == 0:\n        return \"Error: Division by zero\"\n    return x / y\nwhile True:\n    print(\"Simple Calculator\")\n    print(\"1. Add\")\n    print(\"2. Subtract\")\n    print(\"3. Multiply\")\n    print(\"4. Divide\")",
+        "detail": "fully_working_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "group-anagrams",
+        "description": "group-anagrams",
+        "peekOfCode": "words = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\nanagram_map = defaultdict(list)\nresult = []\nfor s in words:\n    sorted_s = tuple(sorted(s))\n    anagram_map[sorted_s].append(s) \nfor value in anagram_map.values():\n    result.append(value)\nprint(result)",
+        "detail": "group-anagrams",
+        "documentation": {}
+    },
+    {
+        "label": "anagram_map",
+        "kind": 5,
+        "importPath": "group-anagrams",
+        "description": "group-anagrams",
+        "peekOfCode": "anagram_map = defaultdict(list)\nresult = []\nfor s in words:\n    sorted_s = tuple(sorted(s))\n    anagram_map[sorted_s].append(s) \nfor value in anagram_map.values():\n    result.append(value)\nprint(result)",
+        "detail": "group-anagrams",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "group-anagrams",
+        "description": "group-anagrams",
+        "peekOfCode": "result = []\nfor s in words:\n    sorted_s = tuple(sorted(s))\n    anagram_map[sorted_s].append(s) \nfor value in anagram_map.values():\n    result.append(value)\nprint(result)",
+        "detail": "group-anagrams",
+        "documentation": {}
+    },
+    {
+        "label": "lose",
+        "kind": 2,
+        "importPath": "guessing_game",
+        "description": "guessing_game",
+        "peekOfCode": "def lose():\n    print(\"\\nYou have run out of attempts. The number was\", random_number)\nwhile attempts < max_attempts:\n    try:\n        guess = int(input(\"Guess the number (between 1 and 10): \"))\n    except ValueError:\n        print(\"Invalid input. Please enter a valid number.\")\n        continue\n    attempts += 1\n    if guess < random_number:",
+        "detail": "guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "random_number",
+        "kind": 5,
+        "importPath": "guessing_game",
+        "description": "guessing_game",
+        "peekOfCode": "random_number = random.randint(1, 10)\n# Initialize attempts and max_attempts\nattempts = 0\nmax_attempts = 5\n# Define the lose function\ndef lose():\n    print(\"\\nYou have run out of attempts. The number was\", random_number)\nwhile attempts < max_attempts:\n    try:\n        guess = int(input(\"Guess the number (between 1 and 10): \"))",
+        "detail": "guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "attempts",
+        "kind": 5,
+        "importPath": "guessing_game",
+        "description": "guessing_game",
+        "peekOfCode": "attempts = 0\nmax_attempts = 5\n# Define the lose function\ndef lose():\n    print(\"\\nYou have run out of attempts. The number was\", random_number)\nwhile attempts < max_attempts:\n    try:\n        guess = int(input(\"Guess the number (between 1 and 10): \"))\n    except ValueError:\n        print(\"Invalid input. Please enter a valid number.\")",
+        "detail": "guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "max_attempts",
+        "kind": 5,
+        "importPath": "guessing_game",
+        "description": "guessing_game",
+        "peekOfCode": "max_attempts = 5\n# Define the lose function\ndef lose():\n    print(\"\\nYou have run out of attempts. The number was\", random_number)\nwhile attempts < max_attempts:\n    try:\n        guess = int(input(\"Guess the number (between 1 and 10): \"))\n    except ValueError:\n        print(\"Invalid input. Please enter a valid number.\")\n        continue",
+        "detail": "guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "first",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "first = \"Yohan\"\nlast = \"Shyam Sundar\"\nprint(type(first))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "last",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "last = \"Shyam Sundar\"\nprint(type(first))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "oddOrEven",
+        "kind": 2,
+        "importPath": "odd_or_even",
+        "description": "odd_or_even",
+        "peekOfCode": "def oddOrEven():\n    Choicenumber = input(\"Enter a number to see if it is odd or even: \")\n    try:\n        Choicenumber = int(Choicenumber)\n        if Choicenumber % 2 == 0:\n            print(\"The number is even.\")\n        else:\n            print(\"The number is odd\")\n    except:\n        print(\"You entered an invalid input \" + Choicenumber + \". you will be terminated\")",
+        "detail": "odd_or_even",
+        "documentation": {}
+    },
+    {
+        "label": "doubleArray",
+        "kind": 2,
+        "importPath": "playground",
+        "description": "playground",
+        "peekOfCode": "def doubleArray(x):\n    y = x.copy()\n    for i in range(len(y)):\n        y[i] = double(y[i])\n    return y \nnumbers = []\nwhile True:\n    try:\n        global elements\n        elements = int(input(\"Enter how many elements are going to be in the list: \"))",
+        "detail": "playground",
+        "documentation": {}
+    },
+    {
+        "label": "double",
+        "kind": 5,
+        "importPath": "playground",
+        "description": "playground",
+        "peekOfCode": "double = lambda x: x * 2\ndef doubleArray(x):\n    y = x.copy()\n    for i in range(len(y)):\n        y[i] = double(y[i])\n    return y \nnumbers = []\nwhile True:\n    try:\n        global elements",
+        "detail": "playground",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "playground",
+        "description": "playground",
+        "peekOfCode": "numbers = []\nwhile True:\n    try:\n        global elements\n        elements = int(input(\"Enter how many elements are going to be in the list: \"))\n        break\n    except ValueError:\n        print(\"\\nInvalid input. Please enter an integer.\")\ntry:\n    for i in range(elements):",
+        "detail": "playground",
+        "documentation": {}
+    },
+    {
+        "label": "link",
+        "kind": 5,
+        "importPath": "yt_downloader",
+        "description": "yt_downloader",
+        "peekOfCode": "link = argv[1]\nyt = YouTube(link)\nprint(\"Title: \", yt.title)\nprint(\"Views: \", yt.views)\nyd = yt.streams.get_highest_resolution()\nyd.download(\"C:/Users/yohan/Videos/Downloaded YT vids\")",
+        "detail": "yt_downloader",
+        "documentation": {}
+    },
+    {
+        "label": "yt",
+        "kind": 5,
+        "importPath": "yt_downloader",
+        "description": "yt_downloader",
+        "peekOfCode": "yt = YouTube(link)\nprint(\"Title: \", yt.title)\nprint(\"Views: \", yt.views)\nyd = yt.streams.get_highest_resolution()\nyd.download(\"C:/Users/yohan/Videos/Downloaded YT vids\")",
+        "detail": "yt_downloader",
+        "documentation": {}
+    },
+    {
+        "label": "yd",
+        "kind": 5,
+        "importPath": "yt_downloader",
+        "description": "yt_downloader",
+        "peekOfCode": "yd = yt.streams.get_highest_resolution()\nyd.download(\"C:/Users/yohan/Videos/Downloaded YT vids\")",
+        "detail": "yt_downloader",
+        "documentation": {}
+    }
+]
