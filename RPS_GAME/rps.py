@@ -1,6 +1,7 @@
 import random
 import time
 import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 from enum import Enum
 import pygame
 
@@ -28,6 +29,7 @@ print("Welcome to Rock, Paper, Scissors!\n")
 print("1 for Rock, 2 for Paper, or 3 for Scissors\n")
 
 play_again = "y"  # Initialize play_again variable
+
 
 while play_again == "y":
     try:
