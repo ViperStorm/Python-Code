@@ -30,11 +30,20 @@ print("1 for Rock, 2 for Paper, or 3 for Scissors\n")
 
 play_again = "y"  # Initialize play_again variable
 
+# Ask the user whether they want to read the rules
+read_rules = input("Do you want to read the rules? (y/n): ").strip().lower()
 
 while play_again == "y":
     try:
-        if play_again == "y":
+        if read_rules == "y":
             start_sound.play()
+            print("Game Rules:\n")
+            print("1. Rock beats Scissors.")
+            print("2. Paper beats Rock.")
+            print("3. Scissors beat Paper.")
+            print("You and Python will make your choices. Let's see who wins!\n")
+            input("Press Enter to continue...")
+
         playerchoice = int(input("Enter your choice: "))
 
         if playerchoice < 1 or playerchoice > 3:
@@ -45,7 +54,7 @@ while play_again == "y":
             print("\nYou chose", str(RPS(playerchoice)).replace("RPS.", "").lower().title())
             print("Python chose", str(RPS(computerchoice)).replace("RPS.", "").lower().title())
 
-            if playerchoice == computerchoice: #1 = Rock, 2 = paper, 3 = scissors
+            if playerchoice == computerchoice:
                 print("Tie Game!😲")
                 tie_sound.play()
                 time.sleep(2.5)
@@ -61,6 +70,7 @@ while play_again == "y":
         play_again = input("Play again? (y/n): ").strip().lower()
 
         if play_again == "y":
+            read_rules = "n"  # Reset the read_rules variable
             start_sound.set_volume(0)
             print("1 for Rock, 2 for Paper, or 3 for Scissors\n")
 
@@ -68,7 +78,7 @@ while play_again == "y":
         print("Invalid input. Please enter a number.")
         for i in range(5, 0, -1):
             print(i, "...")
-            time.sleep(1)
+            time.sleep(0.5)
         quit()
     except:
         print("An error occurred.")
