@@ -29,6 +29,7 @@ print(users)
 users.extend(['Robert', 'Jimmy']) #*1
 print(users)
 
-users.extend(data) # Does the same thing *1
-print(users)
+# users.extend(data) # Does the same thing *1
+# print(users)
 
+users.insert()
