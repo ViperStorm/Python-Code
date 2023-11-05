@@ -40,3 +40,21 @@ print(users)
 
 users[1:3] = ['Robert', 'JPJ']
 print(users)
+
+users.remove('Bob')
+print(users)
+
+print(users.pop())
+print(users)
+
+del users[0]
+print(users)
+
+data.clear()
+# del data #Deletes data
+# print(data) 
+print(data)
+
+users[1:2] = ['dave']
+users.sort()
+print(users)
