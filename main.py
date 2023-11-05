@@ -1,3 +1,6 @@
+from calendar import day_abbr
+
+
 users = ["Dave", "John", "Sara"]
 
 data = ['Yohan', 42, True]
@@ -8,3 +11,11 @@ print(users[0])
 print(users[-2])
 
 print(users.index('Sara'))
+
+print(users[0:2])
+print(users[1:])
+print(users[-3:-1])
+
+
+
+print(len(data))
