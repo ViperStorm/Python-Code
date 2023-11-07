@@ -114,7 +114,7 @@ result_label = tk.Label(
 result_label.pack(pady=20)
 
 # Create a label for instructions
-instruction_label = tk.Label(root, text="Choose Rock or Paper:", font=("Helvetica", 14))
+instruction_label = tk.Label(root, text="Choose Rock, Paper or Scissors:", font=("Helvetica", 14))
 instruction_label.pack()
 
 # Create a variable to hold the player's choice
