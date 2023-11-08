@@ -7,9 +7,9 @@ pygame.init()
 # create the screen
 screen = pygame.display.set_mode((800, 600))
 
-#title and icon
+# title and icon
 pygame.display.set_caption("Space Invaders")
-icon = pygame.image.load('ufo.png')
+icon = pygame.image.load("ufo.png")
 pygame.display.set_icon(icon)
 
 running = True
@@ -19,4 +19,6 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    screen.fill((0, 0, 0))
+    # RGB
+    screen.fill((255, 0, 0))
+    pygame.display.update()
