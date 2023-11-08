@@ -1,23 +1,16 @@
 import pygame
-import pygame.locals
+
 
 pygame.init()
 
-screen_width = 1000
-screen_height = 1000
 
-screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Platformer')
+# create the screen
+screen = pygame.display.set_mode((800, 600))
 
-#load images
+running = True
 
-
-
-
-run = True
-while run:
+# game loop
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            run = False
-
-pygame.quit()
+            running = False
