@@ -20,5 +20,5 @@ while running:
             running = False
 
     # RGB
-    screen.fill((255, 0, 0))
+    screen.fill((0, 0, 0))
     pygame.display.update()
