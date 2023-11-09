@@ -18,7 +18,7 @@ playerX = 370
 playerY = 480
 
 
-def player():
+def player(x,y):
     screen.blit(playerImg, (playerX, playerY))
 
 
