@@ -9,7 +9,7 @@ def oddOrEven():
         else:
             print("The number is odd")
     except:
-        print("You entered an invalid input " + Choicenumber + ". you will be terminated")
+        print("You entered an invalid input " , Choicenumber , ". you will be terminated")
         for i in range(5, 0, -1):
             print(str(i) + "...")
             time.sleep(1)
