@@ -28,6 +28,7 @@ enemyX_change = 0
 def player(x, y):
     screen.blit(playerImg, (x, y))
 
+
 def enemy(x, y):
     screen.blit(enemyImg, (x, y))
 
