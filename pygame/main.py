@@ -1,3 +1,4 @@
+from turtle import back
 import pygame
 import random
 
@@ -7,10 +8,16 @@ pygame.init()
 # create the screen
 screen = pygame.display.set_mode((800, 600))
 
+#add background
+background = pygame.image.load("background.jpg")
+
+
 # caption and icon
 pygame.display.set_caption("Space Invaders")
 icon = pygame.image.load("ufo.png")
 pygame.display.set_icon(icon)
+
+
 
 # player
 playerImg = pygame.image.load("player.png")
@@ -39,6 +46,9 @@ running = True
 while running:
     # RGB
     screen.fill((0, 0, 0))
+    #background image
+    screen.blit(background, (0, 0))
+
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
