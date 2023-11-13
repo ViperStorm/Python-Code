@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((800, 600))
 background = pygame.image.load("background.jpg")
 
 # Background Sound
-mixer.music.load('background.wav')
+mixer.music.load("background.wav")
 mixer.music.play(-1)
 
 # caption and icon
@@ -58,10 +58,19 @@ font = pygame.font.Font("degrassi front.otf", 32)
 textX = 10
 textY = 10
 
+# Game Over text
+over_font = pygame.font.Font("freesansbold.ttf", 64)
+
 
 def show_score(x, y):
     score = font.render("Score: " + str(score_value), True, (255, 255, 255))
     screen.blit(score, (x, y))
+
+
+def game_over_text():
+    over_text = over_font.render("GAME OVER!", True, (255, 255, 255))
+    screen.blit(over_text, (230, 250))
+    
 
 
 def player(x, y):
@@ -108,7 +117,7 @@ while running:
                 playerX_change = 4
             elif event.key == pygame.K_SPACE:
                 if bullet_state == "ready":
-                    bullet_sound = mixer.Sound('laser.wav')
+                    bullet_sound = mixer.Sound("laser.wav")
                     bullet_sound.play()
                     bulletX = playerX
                     fire_bullet(bulletX, bulletY)
@@ -127,6 +136,13 @@ while running:
 
     # enemy movement
     for i in range(num_of_enemies):
+        # Game Over
+        if enemyY[i] > 440:
+            for j in range(num_of_enemies):
+                enemyY[j] = 2000
+            game_over_text()
+            break
+
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
             enemyX_change[i] = 2
@@ -138,7 +154,7 @@ while running:
         # Collision
         collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
-            explotion_sound = mixer.Sound('explosion.wav')
+            explotion_sound = mixer.Sound("explosion.wav")
             explotion_sound.play()
             bulletY = 480
             bullet_state = "ready"
