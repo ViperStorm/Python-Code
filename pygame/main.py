@@ -47,7 +47,7 @@ bullet_state = "ready"  # Ready = You cant see the bullet on the screen
 
 # Score
 score_value = 0
-font = pygame.font.Font("freesansbold.ttf", 32)
+font = pygame.font.Font("degrassi front.otf", 32)
 
 textX = 10
 textY = 10
