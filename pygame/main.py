@@ -121,10 +121,10 @@ while running:
                     bullet_sound.play()
                     bulletX = playerX
                     fire_bullet(bulletX, bulletY)
-
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
+
 
     # Checking for boundaries of the spaceship so it doesn't go out of bounds
     playerX += playerX_change
