@@ -2,6 +2,7 @@ import math
 import pygame
 import random
 from pygame import mixer
+import time
 
 
 pygame.init()
@@ -61,6 +62,8 @@ textY = 10
 # Game Over text
 over_font = pygame.font.Font("freesansbold.ttf", 64)
 
+# Game over Sound effect
+game_over_sound = pygame.mixer.Sound("game_over.mp3")
 
 def show_score(x, y):
     score = font.render("Score: " + str(score_value), True, (255, 255, 255))
@@ -70,8 +73,8 @@ def show_score(x, y):
 def game_over_text():
     over_text = over_font.render("GAME OVER!", True, (255, 255, 255))
     screen.blit(over_text, (230, 250))
-    
-
+    # game_over_sound.play() #### :( ' _ '
+    # time.sleep(3)
 
 def player(x, y):
     screen.blit(playerImg, (x, y))
@@ -124,7 +127,6 @@ while running:
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
-
 
     # Checking for boundaries of the spaceship so it doesn't go out of bounds
     playerX += playerX_change
