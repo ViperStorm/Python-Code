@@ -6,6 +6,7 @@ import time
 
 
 pygame.init()
+pygame.mixer.init()
 
 # create the screen
 screen = pygame.display.set_mode((800, 600))
@@ -18,7 +19,7 @@ mixer.music.load("background.wav")
 mixer.music.play(-1)
 
 # caption and icon
-pygame.display.set_caption("Space Invaders")
+pygame.display.set_caption("Space Invaders (By Yohan Shyam Sundar TM, Copyrights reserved)")
 icon = pygame.image.load("ufo.png")
 pygame.display.set_icon(icon)
 
@@ -62,8 +63,9 @@ textY = 10
 # Game Over text
 over_font = pygame.font.Font("freesansbold.ttf", 64)
 
-# Game over Sound effect
+# Game over Sound effectd
 game_over_sound = pygame.mixer.Sound("game_over.mp3")
+
 
 def show_score(x, y):
     score = font.render("Score: " + str(score_value), True, (255, 255, 255))
@@ -73,8 +75,8 @@ def show_score(x, y):
 def game_over_text():
     over_text = over_font.render("GAME OVER!", True, (255, 255, 255))
     screen.blit(over_text, (230, 250))
-    # game_over_sound.play() #### :( ' _ '
-    # time.sleep(3)
+    game_over_sound.play(loops=0)  #### :( ' _ '
+
 
 def player(x, y):
     screen.blit(playerImg, (x, y))
@@ -178,3 +180,5 @@ while running:
     player(playerX, playerY)
     show_score(textX, textY)
     pygame.display.update()
+
+
