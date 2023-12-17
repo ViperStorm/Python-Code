@@ -15,7 +15,7 @@ screen = pygame.display.set_mode((800, 600))
 background = pygame.image.load("background.jpg")
 
 # Background Sound
-mixer.music.load("background.wav")
+mixer.music.load("background.mp3")
 mixer.music.play(-1)
 
 # caption and icon
